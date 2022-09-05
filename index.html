@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <script src="https://code.jquery.com/jquery-1.9.1.js"></script> -->
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/jquery-3.6.1.min.js"></script>
+	<script src="js/jquery-csv.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+<body>
+	<audio id='shoot' src='resources/gun.mp3' preload='auto'></audio>
+	<audio id='misfire' src='resources/misfire.mp3' preload='auto'></audio>
+	<audio id='recharge' src='resources/recharge.mp3' preload='auto'></audio>
+	<div class='base' id='targets'>
+		<div class='word'></div>
+		<div class='word'></div>
+		<div class='word'></div>
+		<div class='word'></div>
+	</div>
+	<div class='base' id='rifle'>
+		<div id='question'></div>
+		<div id='gun'>
+			<img src='resources/gun.png'>
+		</div>
+	</div>
+	<div id='answer_frame' class='frame'>
+		<span id='congrats'></span>
+	</div>
+	<div id='direction_frame' class='frame'>
+		<div id='direction' onclick='toggle_direction()'></div>
+	</div>
+	<div id='score_frame' class='frame'>
+		<div id='score'><span id='hits'>0</span>/<span id='total'>0</span></div>
+	</div>
+	<div id='load_data_frame' class='frame'>
+		<fieldset><legend><b>Загрузите свой csv-файл со словарем или попробуйте демо</b></legend>
+		<input type='file' accept='text/plain' onchange='load_file(this)'>
+		<input type='button' value='демо словарь' onclick='load_demo_data()'>
+		</fieldset>
+	</div>
+</body>
+</html>
