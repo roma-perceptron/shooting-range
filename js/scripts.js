@@ -167,6 +167,7 @@ function check_answer(e){
 	if (document.data.length == 1)
 	{
 		$('.word').html('');
+		$('.word').css('pointer-events', 'none');
 		$('#congrats').html('ПОЗДРАВЛЯЮ!');
 		$('#question').html('');
 	}
